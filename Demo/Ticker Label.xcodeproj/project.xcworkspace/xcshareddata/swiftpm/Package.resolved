@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "MOTickerLabel",
+        "repositoryURL": "https://github.com/mosaic-io/MOTickerLabel",
+        "state": {
+          "branch": null,
+          "revision": "5bf460582362529fa24a125f00aa10b8d752f98b",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,618 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CAC1E015240B8D8100ABFD34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1E014240B8D8100ABFD34 /* AppDelegate.swift */; };
+		CAC1E017240B8D8100ABFD34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1E016240B8D8100ABFD34 /* SceneDelegate.swift */; };
+		CAC1E019240B8D8100ABFD34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1E018240B8D8100ABFD34 /* ViewController.swift */; };
+		CAC1E01C240B8D8100ABFD34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC1E01A240B8D8100ABFD34 /* Main.storyboard */; };
+		CAC1E01E240B8D8F00ABFD34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAC1E01D240B8D8F00ABFD34 /* Assets.xcassets */; };
+		CAC1E021240B8D8F00ABFD34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC1E01F240B8D8F00ABFD34 /* LaunchScreen.storyboard */; };
+		CAC1E02C240B8D8F00ABFD34 /* Ticker_LabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1E02B240B8D8F00ABFD34 /* Ticker_LabelTests.swift */; };
+		CAC1E037240B8D9000ABFD34 /* Ticker_LabelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1E036240B8D9000ABFD34 /* Ticker_LabelUITests.swift */; };
+		CAE30914240C45F200C30E61 /* MOTickerLabel in Frameworks */ = {isa = PBXBuildFile; productRef = CAE30913240C45F200C30E61 /* MOTickerLabel */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CAC1E028240B8D8F00ABFD34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAC1E009240B8D8100ABFD34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAC1E010240B8D8100ABFD34;
+			remoteInfo = "Ticker Label";
+		};
+		CAC1E033240B8D9000ABFD34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAC1E009240B8D8100ABFD34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAC1E010240B8D8100ABFD34;
+			remoteInfo = "Ticker Label";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CAC1E011240B8D8100ABFD34 /* Ticker Label.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ticker Label.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAC1E014240B8D8100ABFD34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CAC1E016240B8D8100ABFD34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CAC1E018240B8D8100ABFD34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CAC1E01B240B8D8100ABFD34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CAC1E01D240B8D8F00ABFD34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CAC1E020240B8D8F00ABFD34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CAC1E022240B8D8F00ABFD34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAC1E027240B8D8F00ABFD34 /* Ticker LabelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ticker LabelTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAC1E02B240B8D8F00ABFD34 /* Ticker_LabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker_LabelTests.swift; sourceTree = "<group>"; };
+		CAC1E02D240B8D8F00ABFD34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAC1E032240B8D9000ABFD34 /* Ticker LabelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ticker LabelUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAC1E036240B8D9000ABFD34 /* Ticker_LabelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker_LabelUITests.swift; sourceTree = "<group>"; };
+		CAC1E038240B8D9000ABFD34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAC1E050240B939C00ABFD34 /* MOTickerLabel */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MOTickerLabel; path = ../MOTickerLabel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CAC1E00E240B8D8100ABFD34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAE30914240C45F200C30E61 /* MOTickerLabel in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAC1E024240B8D8F00ABFD34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAC1E02F240B8D8F00ABFD34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CAC1E008240B8D8100ABFD34 = {
+			isa = PBXGroup;
+			children = (
+				CAC1E050240B939C00ABFD34 /* MOTickerLabel */,
+				CAC1E013240B8D8100ABFD34 /* Ticker Label */,
+				CAC1E02A240B8D8F00ABFD34 /* Ticker LabelTests */,
+				CAC1E035240B8D9000ABFD34 /* Ticker LabelUITests */,
+				CAC1E012240B8D8100ABFD34 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CAC1E012240B8D8100ABFD34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CAC1E011240B8D8100ABFD34 /* Ticker Label.app */,
+				CAC1E027240B8D8F00ABFD34 /* Ticker LabelTests.xctest */,
+				CAC1E032240B8D9000ABFD34 /* Ticker LabelUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CAC1E013240B8D8100ABFD34 /* Ticker Label */ = {
+			isa = PBXGroup;
+			children = (
+				CAC1E014240B8D8100ABFD34 /* AppDelegate.swift */,
+				CAC1E016240B8D8100ABFD34 /* SceneDelegate.swift */,
+				CAC1E018240B8D8100ABFD34 /* ViewController.swift */,
+				CAC1E01A240B8D8100ABFD34 /* Main.storyboard */,
+				CAC1E01D240B8D8F00ABFD34 /* Assets.xcassets */,
+				CAC1E01F240B8D8F00ABFD34 /* LaunchScreen.storyboard */,
+				CAC1E022240B8D8F00ABFD34 /* Info.plist */,
+			);
+			path = "Ticker Label";
+			sourceTree = "<group>";
+		};
+		CAC1E02A240B8D8F00ABFD34 /* Ticker LabelTests */ = {
+			isa = PBXGroup;
+			children = (
+				CAC1E02B240B8D8F00ABFD34 /* Ticker_LabelTests.swift */,
+				CAC1E02D240B8D8F00ABFD34 /* Info.plist */,
+			);
+			path = "Ticker LabelTests";
+			sourceTree = "<group>";
+		};
+		CAC1E035240B8D9000ABFD34 /* Ticker LabelUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CAC1E036240B8D9000ABFD34 /* Ticker_LabelUITests.swift */,
+				CAC1E038240B8D9000ABFD34 /* Info.plist */,
+			);
+			path = "Ticker LabelUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CAC1E010240B8D8100ABFD34 /* Ticker Label */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAC1E03B240B8D9000ABFD34 /* Build configuration list for PBXNativeTarget "Ticker Label" */;
+			buildPhases = (
+				CAC1E00D240B8D8100ABFD34 /* Sources */,
+				CAC1E00E240B8D8100ABFD34 /* Frameworks */,
+				CAC1E00F240B8D8100ABFD34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ticker Label";
+			packageProductDependencies = (
+				CAE30913240C45F200C30E61 /* MOTickerLabel */,
+			);
+			productName = "Ticker Label";
+			productReference = CAC1E011240B8D8100ABFD34 /* Ticker Label.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CAC1E026240B8D8F00ABFD34 /* Ticker LabelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAC1E03E240B8D9000ABFD34 /* Build configuration list for PBXNativeTarget "Ticker LabelTests" */;
+			buildPhases = (
+				CAC1E023240B8D8F00ABFD34 /* Sources */,
+				CAC1E024240B8D8F00ABFD34 /* Frameworks */,
+				CAC1E025240B8D8F00ABFD34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAC1E029240B8D8F00ABFD34 /* PBXTargetDependency */,
+			);
+			name = "Ticker LabelTests";
+			productName = "Ticker LabelTests";
+			productReference = CAC1E027240B8D8F00ABFD34 /* Ticker LabelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CAC1E031240B8D8F00ABFD34 /* Ticker LabelUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAC1E041240B8D9000ABFD34 /* Build configuration list for PBXNativeTarget "Ticker LabelUITests" */;
+			buildPhases = (
+				CAC1E02E240B8D8F00ABFD34 /* Sources */,
+				CAC1E02F240B8D8F00ABFD34 /* Frameworks */,
+				CAC1E030240B8D8F00ABFD34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAC1E034240B8D9000ABFD34 /* PBXTargetDependency */,
+			);
+			name = "Ticker LabelUITests";
+			productName = "Ticker LabelUITests";
+			productReference = CAC1E032240B8D9000ABFD34 /* Ticker LabelUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CAC1E009240B8D8100ABFD34 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = Mosaic;
+				TargetAttributes = {
+					CAC1E010240B8D8100ABFD34 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					CAC1E026240B8D8F00ABFD34 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = CAC1E010240B8D8100ABFD34;
+					};
+					CAC1E031240B8D8F00ABFD34 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = CAC1E010240B8D8100ABFD34;
+					};
+				};
+			};
+			buildConfigurationList = CAC1E00C240B8D8100ABFD34 /* Build configuration list for PBXProject "Ticker Label" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CAC1E008240B8D8100ABFD34;
+			packageReferences = (
+				CAE30912240C45F200C30E61 /* XCRemoteSwiftPackageReference "MOTickerLabel" */,
+			);
+			productRefGroup = CAC1E012240B8D8100ABFD34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CAC1E010240B8D8100ABFD34 /* Ticker Label */,
+				CAC1E026240B8D8F00ABFD34 /* Ticker LabelTests */,
+				CAC1E031240B8D8F00ABFD34 /* Ticker LabelUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CAC1E00F240B8D8100ABFD34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAC1E021240B8D8F00ABFD34 /* LaunchScreen.storyboard in Resources */,
+				CAC1E01E240B8D8F00ABFD34 /* Assets.xcassets in Resources */,
+				CAC1E01C240B8D8100ABFD34 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAC1E025240B8D8F00ABFD34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAC1E030240B8D8F00ABFD34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CAC1E00D240B8D8100ABFD34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAC1E019240B8D8100ABFD34 /* ViewController.swift in Sources */,
+				CAC1E015240B8D8100ABFD34 /* AppDelegate.swift in Sources */,
+				CAC1E017240B8D8100ABFD34 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAC1E023240B8D8F00ABFD34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAC1E02C240B8D8F00ABFD34 /* Ticker_LabelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAC1E02E240B8D8F00ABFD34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAC1E037240B8D9000ABFD34 /* Ticker_LabelUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CAC1E029240B8D8F00ABFD34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAC1E010240B8D8100ABFD34 /* Ticker Label */;
+			targetProxy = CAC1E028240B8D8F00ABFD34 /* PBXContainerItemProxy */;
+		};
+		CAC1E034240B8D9000ABFD34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAC1E010240B8D8100ABFD34 /* Ticker Label */;
+			targetProxy = CAC1E033240B8D9000ABFD34 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CAC1E01A240B8D8100ABFD34 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAC1E01B240B8D8100ABFD34 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CAC1E01F240B8D8F00ABFD34 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAC1E020240B8D8F00ABFD34 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CAC1E039240B8D9000ABFD34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CAC1E03A240B8D9000ABFD34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CAC1E03C240B8D9000ABFD34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Ticker Label/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mosaic.Ticker-Label";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CAC1E03D240B8D9000ABFD34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Ticker Label/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mosaic.Ticker-Label";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CAC1E03F240B8D9000ABFD34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Ticker LabelTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mosaic.Ticker-LabelTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ticker Label.app/Ticker Label";
+			};
+			name = Debug;
+		};
+		CAC1E040240B8D9000ABFD34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Ticker LabelTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mosaic.Ticker-LabelTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ticker Label.app/Ticker Label";
+			};
+			name = Release;
+		};
+		CAC1E042240B8D9000ABFD34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Ticker LabelUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mosaic.Ticker-LabelUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Ticker Label";
+			};
+			name = Debug;
+		};
+		CAC1E043240B8D9000ABFD34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Ticker LabelUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mosaic.Ticker-LabelUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Ticker Label";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CAC1E00C240B8D8100ABFD34 /* Build configuration list for PBXProject "Ticker Label" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAC1E039240B8D9000ABFD34 /* Debug */,
+				CAC1E03A240B8D9000ABFD34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAC1E03B240B8D9000ABFD34 /* Build configuration list for PBXNativeTarget "Ticker Label" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAC1E03C240B8D9000ABFD34 /* Debug */,
+				CAC1E03D240B8D9000ABFD34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAC1E03E240B8D9000ABFD34 /* Build configuration list for PBXNativeTarget "Ticker LabelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAC1E03F240B8D9000ABFD34 /* Debug */,
+				CAC1E040240B8D9000ABFD34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAC1E041240B8D9000ABFD34 /* Build configuration list for PBXNativeTarget "Ticker LabelUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAC1E042240B8D9000ABFD34 /* Debug */,
+				CAC1E043240B8D9000ABFD34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CAE30912240C45F200C30E61 /* XCRemoteSwiftPackageReference "MOTickerLabel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mosaic-io/MOTickerLabel";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CAE30913240C45F200C30E61 /* MOTickerLabel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CAE30912240C45F200C30E61 /* XCRemoteSwiftPackageReference "MOTickerLabel" */;
+			productName = MOTickerLabel;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CAC1E009240B8D8100ABFD34 /* Project object */;
+}
