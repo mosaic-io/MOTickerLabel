@@ -1,6 +1,6 @@
 # MOTickerLabel
 
-Ticker Label that animates changes in monetary value. 
+Ticker Label that animates changes in monetary value. To learn more about how `MOTickerLabel` works, checkout this [Mosaic Enginnering blog post](https://blog.getmosaic.io/The-Ticker).
 
 > The label currently only supports US dollar.
 
