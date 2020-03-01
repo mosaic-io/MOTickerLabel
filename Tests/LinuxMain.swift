@@ -1,7 +1,7 @@
 import XCTest
 
-import MSTickerLabelTests
+import MOTickerLabelTests
 
 var tests = [XCTestCaseEntry]()
-tests += MSTickerLabelTests.allTests()
+tests += MOTickerLabelTests.allTests()
 XCTMain(tests)

@@ -1,4 +1,4 @@
-# MSTickerLabel
+# MOTickerLabel
 
 Ticker Label that animates changes in monetary value. 
 
@@ -21,7 +21,7 @@ DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
 
 MIT License
 
-Copyright (c) [2020] [MSTickerLabel by Mosaic Engineering]
+Copyright (c) [2020] [MOTickerLabel by Mosaic Engineering]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

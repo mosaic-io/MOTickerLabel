@@ -1,12 +1,12 @@
 import XCTest
-@testable import MSTickerLabel
+@testable import MOTickerLabel
 
-final class MSTickerLabelTests: XCTestCase {
+final class MOTickerLabelTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(MSTickerLabel().text, "Hello, World!")
+        XCTAssertEqual(MOTickerLabel().text, "Hello, World!")
     }
 
     static var allTests = [
