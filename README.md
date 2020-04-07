@@ -17,7 +17,7 @@ DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
 }
 ```
 
-## OUTPUT
+## Demo
 
 ![](https://blog.getmosaic.io/aa65c8e28bce049e831b31d185ff3dd8/final.gif)
 
