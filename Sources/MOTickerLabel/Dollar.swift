@@ -20,7 +20,7 @@ public struct Dollar: Comparable, CustomStringConvertible {
     var amount: Float
     
     var numberOfDigits: Int {
-        if amount == 0.00 { return 3 }
+        if amount < 1 { return 3 }
         else { return Int(floor(log10(amount))) + 1 + 2 }
     }
     
