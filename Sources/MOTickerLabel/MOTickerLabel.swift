@@ -11,13 +11,13 @@ import UIKit
 public class MOTickerLabel: UIView {
     
     lazy var runningAnimator: UIViewPropertyAnimator = {
-        let animator = UIViewPropertyAnimator(duration: 0.5, dampingRatio: 0.5, animations: nil)
+        let animator = UIViewPropertyAnimator(duration: 0.5, dampingRatio: 1.0, animations: nil)
         animator.scrubsLinearly = false
         return animator
     }()
     
     lazy var arrayModificationAnimator: UIViewPropertyAnimator = {
-        let animator = UIViewPropertyAnimator(duration: 0.5, dampingRatio: 0.5, animations: nil)
+        let animator = UIViewPropertyAnimator(duration: 0.5, dampingRatio: 1.0, animations: nil)
         animator.scrubsLinearly = false
         return animator
     }()
@@ -41,7 +41,19 @@ public class MOTickerLabel: UIView {
                 if let label = $0 as? MOSingleCounterLabel {
                     label.textColor = textColor
                 } else {
-                    $0.tintColor = textColor
+                    ($0 as? UILabel)?.textColor = textColor
+                }
+            }
+        }
+    }
+    
+    public var font: UIFont = .boldSystemFont(ofSize: 14) {
+        didSet {
+            stackView.arrangedSubviews.forEach {
+                if let label = $0 as? MOSingleCounterLabel {
+                    label.font = font
+                } else if let staticLabel = $0 as? UILabel {
+                    staticLabel.font = font
                 }
             }
         }
@@ -67,6 +79,8 @@ public class MOTickerLabel: UIView {
     }
     
     func commonInit() {
+        backgroundColor = .clear
+        
         addSubview(stackView)
         stackView.pin(to: self)
         setupInitialLabels()
@@ -93,10 +107,10 @@ public class MOTickerLabel: UIView {
         switch diff {
         case let x where x < 0:
             var cnt = abs(x)
-            while (cnt != 0 || stackView.arrangedSubviews[1] as? UIImageView != nil) {
+            while (cnt != 0 || stackView.arrangedSubviews[1] as? UILabel != nil) {
                 let view = stackView.arrangedSubviews[1]
                 view.removeFromSuperview()
-                if view as? UIImageView == nil {
+                if view as? UILabel == nil {
                     cnt -= 1
                 }
             }
@@ -104,7 +118,9 @@ public class MOTickerLabel: UIView {
             (0..<x).compactMap { new.digit(at: $0) }
                 .reversed()
                 .map { (value: Int) -> MOSingleCounterLabel in
-                    MOSingleCounterLabel(frame: self.approximateFrame, value: value)
+                    let label = MOSingleCounterLabel(frame: self.approximateFrame, value: value, font: self.font)
+                    label.textColor = textColor
+                    return label
                 }
                 .forEach { label in
                     self.stackView.insertArrangedSubview(label, at: 1)
@@ -113,16 +129,10 @@ public class MOTickerLabel: UIView {
             break
         }
         
-        if new.numberOfDigits <= 5 {
-            return
-        }
-        
         stride(from: stackView.arrangedSubviews.count - 4, through: 0, by: -4).dropFirst().forEach { i in
             let view = stackView.arrangedSubviews[i]
-            if view as? UIImageView == nil {
+            if view as? UILabel == nil {
                 stackView.insertArrangedSubview(staticLabel(with: ","), at: i + 1)
-            } else if let staticView = view as? UIImageView, staticView.tag == 69 {
-                stackView.insertArrangedSubview(staticLabel(with: ","), at: 2)
             }
         }
         
@@ -136,8 +146,11 @@ public class MOTickerLabel: UIView {
     func setupInitialLabels() {
         let numberLabels = (0..<value.numberOfDigits).compactMap {
             value.digit(at: $0)
-        }.map {
-            MOSingleCounterLabel(frame: self.approximateFrame, value: $0)
+        }.map { (value: Int) -> (MOSingleCounterLabel) in
+            let label = MOSingleCounterLabel(frame: self.approximateFrame, value: value, font: self.font)
+            label.font = self.font
+            label.textColor = textColor
+            return label
         }
         
         numberLabels.enumerated().forEach { (offset, label) in
@@ -153,21 +166,20 @@ public class MOTickerLabel: UIView {
     
     func insertNotations() {
         let dollarSign = staticLabel(with: "$")
-        dollarSign.tag = 69
         let period = staticLabel(with: ".")
         stackView.insertArrangedSubview(dollarSign, at: 0)
         stackView.insertArrangedSubview(period, at: stackView.arrangedSubviews.count - 2)
     }
     
-    func staticLabel(with string: String) -> UIImageView {
+    func staticLabel(with string: String) -> UILabel {
         let label = UILabel(frame: approximateFrame)
+        label.translatesAutoresizingMaskIntoConstraints = false
         label.text = string
-        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.font = font
+        label.textAlignment = .center
         label.setFontSizeToFill()
         label.sizeToFit()
-        let image = UIImage.imageWithLabel(label: label)
-        let imageView = UIImageView(image: image)
-        imageView.tintColor = textColor
-        return imageView
+        label.textColor = textColor
+        return label
     }
 }

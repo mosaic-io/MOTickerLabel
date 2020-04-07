@@ -9,9 +9,9 @@
 import UIKit
 import Foundation
 
-final class MOSingleCounterLabel: UIView {
+public class MOSingleCounterLabel: UIView {
     lazy var runningAnimator: UIViewPropertyAnimator = {
-        let animator = UIViewPropertyAnimator(duration: 0.5, dampingRatio: 0.5, animations: nil)
+        let animator = UIViewPropertyAnimator(duration: 0.5, dampingRatio: 1.0, animations: nil)
         animator.scrubsLinearly = false
         return animator
     }()
@@ -19,7 +19,26 @@ final class MOSingleCounterLabel: UIView {
     public var textColor: UIColor = .label {
         didSet {
             numberWheel.arrangedSubviews.forEach {
-                $0.tintColor = textColor
+                ($0 as? UILabel)?.textColor = textColor
+            }
+        }
+    }
+    
+    public var font: UIFont = .boldSystemFont(ofSize: 14) {
+        didSet {
+            numberWheel.arrangedSubviews.compactMap { $0 as? UILabel }.forEach {
+                $0.font = font
+                $0.setFontSizeToFill()
+                $0.sizeToFit()
+            }
+            
+            scrollView.setNeedsLayout()
+            scrollView.layoutIfNeeded()
+            setNeedsLayout()
+            layoutIfNeeded()
+        
+            if let val = value {
+                scrollView.setContentOffset(offset(of: val), animated: true)
             }
         }
     }
@@ -35,23 +54,18 @@ final class MOSingleCounterLabel: UIView {
             }
         }
     }
-    
-    lazy var singleLabelHeight: CGFloat = {
-        numberLabels[0].frame.height
-    }()
         
-    lazy var numberLabels: [UIImageView] = {
+    lazy var numberLabels: [UILabel] = {
         return (0...9).map {
             let label = UILabel(frame: self.frame)
+            label.translatesAutoresizingMaskIntoConstraints = false
             label.textAlignment = .center
             label.text = "\($0)"
-            label.font = UIFont.boldSystemFont(ofSize: 14)
+            label.font = font
+            label.textColor = textColor
             label.setFontSizeToFill()
             label.sizeToFit()
-            let image = UIImage.imageWithLabel(label: label)
-            let imageView = UIImageView(image: image)
-            imageView.tintColor = textColor
-            return imageView
+            return label
         }
     }()
     
@@ -60,10 +74,12 @@ final class MOSingleCounterLabel: UIView {
         stackView.axis = .vertical
         stackView.spacing = 0
         stackView.alignment = .center
+        stackView.distribution = .fillEqually
         stackView.translatesAutoresizingMaskIntoConstraints = false
         numberLabels.forEach {
             stackView.addArrangedSubview($0)
         }
+        stackView.addArrangedSubview(UIView())
         return stackView
     }()
     
@@ -80,11 +96,13 @@ final class MOSingleCounterLabel: UIView {
         return scrollView
     }()
     
-    var font: UIFont?
-    
-    init(frame: CGRect, value: Int) {
+    init(frame: CGRect, value: Int, font: UIFont? = nil) {
         super.init(frame: frame)
         self.value = value
+        
+        if let customFont = font {
+            self.font = customFont
+        }
         
         addSubview(scrollView)
         scrollView.pin(to: self)
@@ -106,7 +124,7 @@ final class MOSingleCounterLabel: UIView {
         let destinationOffset = offset(of: new)
         
         if runningAnimator.isRunning {
-            runningAnimator.pauseAnimation()
+            runningAnimator.stopAnimation(true)
             scrollView.contentOffset = self.scrollView.contentOffset
         }
         
